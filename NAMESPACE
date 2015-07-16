@@ -1,0 +1,14 @@
+exportPattern("^[^\\.]")
+
+import("stats","graphics","utils","grDevices")
+import("ape","cluster","geomorph","phytools","rgl")
+
+importFrom("gplots", heatmap.2)
+importFrom("gplots", redgreen)
+
+importFrom("circular", arrows.circular)
+importFrom("circular", points.circular)
+importFrom("circular", mean.circular)
+importFrom("circular", plot.circular)
+importFrom("circular", rayleigh.test)
+
