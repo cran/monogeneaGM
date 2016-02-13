@@ -19,7 +19,7 @@
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
 #' @references Batschelet E. (1981). Circular Statistics in Biology. London: Academic Press.
 #'
-#' Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #'
 #' Klingenberg CP. (2013). Visualizations in geometric morphometrics: 
 #' how to read and how to make graphs showing shape changes. Hystrix 24:15-24.

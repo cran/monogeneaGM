@@ -27,7 +27,7 @@ This function aligns a set of landmark configurations using Generalized Procrust
 }
 \details{
 This function is essentially a wrapper for the \code{gpagen} function
-in the \code{geomorph} package (Version 2.1.6) to help convert
+in the \code{geomorph} package (version 3.0.0) to help convert
 raw landmark coordinates of monogenean anchors to GPA coordinates for downstream analysis.
 }
 \examples{
@@ -68,7 +68,7 @@ meansize=1.2,polygon.outline=TRUE,c(-.6,.6),c(-.6,.6) )
 Tsung Fei Khang \email{tfkhang@um.edu.my}
 }
 \references{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 
 Adams DC, Otarola-Castillo E. (2013). geomorph: an R package for the collection and analysis of geometric
 morphometric shape data. Methods in Ecology and Evolution 4:393-399.

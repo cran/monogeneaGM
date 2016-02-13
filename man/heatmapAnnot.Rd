@@ -5,7 +5,7 @@
 \title{Annotated heat map}
 \usage{
 heatmapAnnot(x, labcol, xlab = "", ylab = "", genus = "", rowlab = TRUE,
-  pt = 0.25)
+  pt = 0, dist.method = "manhattan", clust.method = "ward.D")
 }
 \arguments{
 \item{x}{a matrix with rows representing species samples and columns representing morphometrical variables of
@@ -23,15 +23,16 @@ interest}
 
 \item{pt}{if the rows have been ranked, two lines are drawn - one at the \code{pt}x100th percentile (bottom),
 the other at the (1-\code{pt})x100th percentile (top); set to 0 to disable}
+
+\item{dist.method}{a distance metric implemented in the \code{dist} function; defaults to \code{manhattan}}
+
+\item{clust.method}{a clustering algorithm implemented in the \code{hclust} function; defaults to \code{ward.D}}
 }
 \description{
 This function produces a heat map with hierarchical clustering of samples using multivariate size or shape data.
 }
 \details{
-This function customizes the \code{heatmap.2} function in the \code{gplots} package (Version 2.17.0).
-Pairwise distances between samples are computed using unsquared Euclidean distance, therefore
-clustering is based on the generalized Ward criterion (Batagelj, 1988). Row standardization is switched on,
-and a color legend for species is given in the left panel.
+This function customizes the \code{heatmap.2} function in the \code{gplots} package (Version 2.17.0). Row standardization is switched on, and a color legend for species is given in the left panel.
 }
 \examples{
 library(gplots)
@@ -44,7 +45,7 @@ dendrogram <- hclust(dist(ligophorus_shape))
 #check dendrogram and note cut-off for the two main clades
 plot(dendrogram)
 
-clade_id <- cutree(dendrogram, h=0.55)
+clade_id <- cutree(dendrogram, h=0.5)
 
 f_s <- numeric(ncol(ligophorus_shape))
 
@@ -64,12 +65,13 @@ xlab="Specimens", genus="L. ")
 Tsung Fei Khang \email{tfkhang@um.edu.my}
 }
 \references{
-Batagelj V. (1988). Generalized Ward and related clustering problems. In: Classification and Related Methods of Data Analysis. H.H.Bock (ed.). Amsterdam: North-Holland, pp. 67-74.
-
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 
 Warnes GR, Bolker B, Bonebakker L, Gentleman R, Huber W, Liaw A, Lumley T,Maechler M, Magnusson M, Moeller S,
 Schwartz M, Venables B. (2015). gplots:Various R programming tools for plotting data. R package version 2.17.0.
 Available at: http://CRAN.R-project.org/package=gplots.
+}
+\seealso{
+\code{\link{dist}}, \code{\link{hclust}}
 }
 

@@ -6,7 +6,7 @@
 \title{Array data of Generalized Procrustes Analysis (GPA) coordinates of dorsal anchors of \emph{Ligophorus liewi} samples}
 \format{An array of 31 matrices, each having 11 rows (landmarks) and 2 columns (xy GPA coordinates)}
 \source{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 }
 \usage{
 data(liewi_gpa)

@@ -25,7 +25,7 @@
 #' @details This function is similar to \code{tpColorPlot2d}, and is mainly useful for its additional
 #' option for visualising the marginal distributions. The \code{ape} and \code{phytools} packages are required.
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
-#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #'
 #' Paradis E, Claude J & Strimmer K. (2004). APE: analyses of phylogenetics and evolution in R language. Bioinformatics 20: 289-290.
 #'

@@ -15,7 +15,7 @@
 #' of each species. They are also useful for checking the distribution of pairwise Euclidean distance between two landmarks.
 #' @seealso \code{\link{Qscore}}
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
-#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #' @examples
 #' data(pwed_pd)
 #' pwed_pd <- matrix2list.2(pwed_pd)

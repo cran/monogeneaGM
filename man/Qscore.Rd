@@ -64,7 +64,7 @@ Tsung Fei Khang \email{tfkhang@um.edu.my}
 \references{
 Bland JM, Altman DG. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. Lancet 327:307-310.
 
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 }
 \seealso{
 \code{\link{pwdist}}, \code{\link{boxplotSort}}

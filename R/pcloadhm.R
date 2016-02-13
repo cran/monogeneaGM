@@ -19,7 +19,7 @@
 #' can be very useful in determining the biological interpretation of a particular principal component.
 #' @seealso \code{\link{plotCircular}}, \code{\link{pca2d}}, \code{\link{colorBar}}
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
-#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #'
 #' @examples
 #' library(phytools)

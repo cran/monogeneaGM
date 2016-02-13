@@ -6,10 +6,12 @@
 #' @usage data(ligophorus_tpsdata)
 #' @format a list of 13 objects; each object is a list containing objects that are matrices with 44 rows
 #' (landmarks 1 to 11 of ventral right,ventral left,dorsal right and dorsal left anchors) and 2 columns (xy-coordinates) 
-#' @details Quality control via \code{Qscore} has not yet been applied to this data set (n=537), 
+#' @details Quality control via \code{Qscore} has not yet been applied to this data set (n=530), 
 #' so examples of good and poor quality specimens can be inspected using \code{polyVis}.
 #' @keywords datasets
-#' @source Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @source Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
+#'
+#' Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Data from: Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. Dryad Digital Repository. http://dx.doi.org/10.5061/dryad.50sg7.
 #' @seealso \code{\link{Qscore}}, \code{\link{polyVis}}
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
 #' @references Rohlf FJ. (2013). Morphometrics at SUNY Stony Brook. Available at http://life.bio.sunysb.edu/morph/soft-dataacq.html

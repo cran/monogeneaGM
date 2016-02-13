@@ -34,7 +34,7 @@ pwdist(ligophorus_tpsdata$bantingensis[[1]],average=FALSE)
 Tsung Fei Khang \email{tfkhang@um.edu.my}
 }
 \references{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 
 Lele SR,  Richtsmeier  JT. 2001. An Invariant Approach to Statistical Analysis of Shape. Boca Raton: Chapman and Hall.
 }

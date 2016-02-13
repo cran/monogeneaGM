@@ -11,27 +11,25 @@
 #' @param sgn a numeric vector; two choices 1 and -1; defaults to c(1,-1)
 #' @return an array containing GPA-coordinates of the specimens of interest
 #' @details This function is essentially a wrapper for \code{procrustesFit} and \code{stdLM} to ease extraction of GPA-coordinates
-#' from list data. Both require the \code{geomorph} package (Version 2.1.6).
+#' from list data. Both require the \code{geomorph} package (Version 3.0.0).
 #' @seealso \code{\link{procrustesFit}}, \code{\link{stdLM}}
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
-#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #'
 #' Adams DC, Otarola-Castillo E. (2013). geomorph: an R package for the collection and analysis of geometric morphometric shape data. Methods in Ecology and Evolution 4:393-399.
 #' @examples
-#' library(geomorph)
-#'
 #' data(ligophorus_tpsdata)
-#' vright <- procrustesFit.2(ligophorus_tpsdata$johorensis, 1, makeplot=TRUE,
-#' reflect=FALSE, swap=TRUE)
 #'
-#' vleft <- procrustesFit.2(ligophorus_tpsdata$johorensis, 2, makeplot=TRUE,
-#' reflect=TRUE, swap=TRUE)
+#' vright <- procrustesFit.2(ligophorus_tpsdata$johorensis, 1,
+#' makeplot=TRUE, reflect=FALSE, swap=TRUE, sgn=c(-1,1))
+#'
+#' vleft <- procrustesFit.2(ligophorus_tpsdata$johorensis, 2, 
+#' makeplot=TRUE, reflect=TRUE, swap=TRUE, sgn=c(-1,1))
 #'
 #' va <- (vright+vleft)/2
 #'
-#' plotLM(va, "VA", pointscale=0.8, meansize=1.2, polygon.outline=TRUE,
+#' plotLM(va, "VA", pointscale=0.8, meansize=1.2, polygon.outline=TRUE, 
 #' axispointscale=0.8, c(-.6,.6),c(-.6,.6))
-#'
 
 procrustesFit.2 <- function(x,e,makeplot=FALSE, reflect=FALSE, swap=TRUE, axispointscale=0.8, sgn=c(1,-1)){
 

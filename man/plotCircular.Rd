@@ -59,7 +59,7 @@ Agostinelli C, Lund U. (2013). R package 'circular': Circular Statistics (versio
 
 Batschelet E. (1981). Circular Statistics in Biology. London: Academic Press.
 
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 
 Revell LJ. (2012). phytools: An R package for phylogenetic comparative biology (and other things). Methods in Ecology and Evolution 3:217-223.
 }

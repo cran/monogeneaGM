@@ -10,11 +10,11 @@
 #' @param showplot logical; if TRUE, a scatter plot of the GPA coordinates of all specimens of interest is returned
 #' @return a list where the components are arrays of GPA coordinates for the specimens of interest
 #' @details This function is essentially a wrapper for the \code{gpagen} function 
-#' in the \code{geomorph} package (Version 2.1.6) to help convert 
+#' in the \code{geomorph} package (version 3.0.0) to help convert 
 #' raw landmark coordinates of monogenean anchors to GPA coordinates for downstream analysis.
 #' @seealso \code{\link{matrix2list}}, \code{\link{anglePolygon}}
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
-#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #'
 #' Adams DC, Otarola-Castillo E. (2013). geomorph: an R package for the collection and analysis of geometric
 #' morphometric shape data. Methods in Ecology and Evolution 4:393-399.
@@ -53,106 +53,82 @@
 #' meansize=1.2,polygon.outline=TRUE,c(-.6,.6),c(-.6,.6) )
 #'
 
-procrustesFit <- function(dat, anchor.index, x, PrinAxes=FALSE,showplot=FALSE) {
-
-l1 <- length(x[[1]])
-l2 <- length(x[[2]])
-n <- length(dat)
-
-if( l1 > 0 ) {
-	test <- vector("list", l1)
-
-	for(i in 1:l1){
-		test[[i]] <-  dat[[x[[1]][i]]][(11*(anchor.index-1)+1):(11*anchor.index),] 
-	}
-
-V1 <- array(,dim=c(11,2,l1))
-
-	for(i in 1:l1){
-		V1[,,i] <- test[[i]]
-	}
-
+procrustesFit <- function (dat, anchor.index, x, PrinAxes = FALSE, showplot = FALSE) 
+{
+    l1 <- length(x[[1]])
+    l2 <- length(x[[2]])
+    n <- length(dat)
+    if (l1 > 0) {
+        test <- vector("list", l1)
+        for (i in 1:l1) {
+            test[[i]] <- dat[[x[[1]][i]]][(11 * (anchor.index - 
+                1) + 1):(11 * anchor.index), ]
+        }
+        V1 <- array(, dim = c(11, 2, l1))
+        for (i in 1:l1) {
+            V1[, , i] <- test[[i]]
+        }
+    }
+    if (l2 > 0) {
+        test <- vector("list", l2)
+        for (i in 1:l2) {
+            test[[i]] <- dat[[x[[2]][i]]][(11 * (anchor.index - 
+                1) + 1):(11 * anchor.index), ]
+        }
+        V2 <- array(, dim = c(11, 2, l2))
+        for (i in 1:l2) {
+            V2[, , i] <- test[[i]]
+        }
+    }
+    if ((anchor.index == 2 | anchor.index == 4) & l1 > 0) {
+        for (i in 1:l1) {
+            V1[, , i][, 1] <- V1[, , i][, 1] * -1
+        }
+    }
+    else if ((anchor.index == 1 | anchor.index == 3) & l2 > 0) {
+        for (i in 1:l2) {
+            V2[, , i][, 1] <- V2[, , i][, 1] * -1
+        }
+    }
+    if (l1 > 0 & l2 > 0) {
+        T <- array(, dim = c(11, 2, n))
+        for (i in 1:l1) {
+            T[, , i] <- V1[, , i]
+        }
+        for (i in 1:l2) {
+            T[, , (i + l1)] <- V2[, , i]
+        }
+    }
+    else if (l1 == 0) {
+        T <- array(, dim = c(11, 2, n))
+        for (i in 1:l2) {
+            T[, , (i + l1)] <- V2[, , i]
+        }
+    }
+    else if (l2 == 0) {
+        T <- array(, dim = c(11, 2, n))
+        for (i in 1:l1) {
+            T[, , i] <- V1[, , i]
+        }
+    }
+    if (showplot == TRUE) {
+        superimpose <- gpagen(T, ProcD = TRUE, 
+            PrinAxes = PrinAxes)
+        plotAllSpecimens(superimpose$coord)
+        xcordmat <- mapply(function(k) superimpose$coord[, , 
+            k][, 1], k = 1:n)
+        ycordmat <- mapply(function(k) superimpose$coord[, , 
+            k][, 2], k = 1:n)
+        xcordmat <- t(xcordmat)
+        ycordmat <- t(ycordmat)
+        bigcircle <- cbind(apply(xcordmat, 2, mean), apply(ycordmat, 
+            2, mean))
+        polygon(bigcircle[, 1], bigcircle[, 2], lwd = 2, border = "black")
+    }
+    else if (showplot == FALSE) {
+        superimpose <- gpagen(T, ProcD = TRUE, 
+            PrinAxes = PrinAxes)
+    }
+    return(superimpose)
 }
 
-#Do a reflection
-
-if( l2 > 0 ) {
-	test <- vector("list", l2)
-
-	for(i in 1:l2){
-		test[[i]] <- dat[[x[[2]][i]]][(11*(anchor.index-1)+1):(11*anchor.index),] 
-	}
-
-V2 <- array(,dim=c(11,2,l2))
-
-	for(i in 1:l2){
-		V2[,,i] <- test[[i]]
-	}
-
-}
-
-if( (anchor.index == 2 | anchor.index == 4 ) & l1 > 0){
-	for(i in 1:l1){
-	V1[,,i][,1] <- V1[,,i][,1] * -1
-	}
-}
-
-else if( (anchor.index == 1 | anchor.index == 3) & l2 > 0){
-	for(i in 1:l2){
-	V2[,,i][,1] <- V2[,,i][,1] * -1
-	}
-}
-
-if(l1 > 0 & l2 > 0 ){
-	T <- array(,dim=c(11,2,n))
-
-	for(i in 1:l1){
-		T[,,i] <- V1[,,i]
-	}
-
-	for(i in 1:l2){
-		T[,,(i+l1)] <- V2[,,i]
-	}
-
-}
-
-else if(l1 == 0) {
-
-	T <- array(,dim=c(11,2,n))
-
-	for(i in 1:l2){
-		T[,,(i+l1)] <- V2[,,i]
-	}
-
-}
-
-else if(l2 == 0) {
-
-	T <- array(,dim=c(11,2,n))
-
-	for(i in 1:l1){
-		T[,,i] <- V1[,,i]
-	}
-
-}
-
-if(showplot == TRUE) {
-	superimpose <- gpagen(T, pointscale=1, ProcD=TRUE, PrinAxes=PrinAxes, ShowPlot=TRUE)
-	xcordmat <- mapply(function(k) superimpose$coord[,,k][,1], k=1:n)
-	ycordmat <- mapply(function(k) superimpose$coord[,,k][,2], k=1:n)
-	xcordmat <- t(xcordmat)
-	ycordmat <- t(ycordmat)
-
-	bigcircle <- cbind(apply(xcordmat,2,mean) , apply(ycordmat,2,mean) )
-
-	polygon(bigcircle[,1], bigcircle[,2],lwd=2,border="black")
-}
-
-else if(showplot == FALSE){
-	superimpose <- gpagen(T, pointscale=1, ProcD=TRUE, PrinAxes=PrinAxes, ShowPlot=FALSE)
-
-}
-
-return(superimpose)
-
-}

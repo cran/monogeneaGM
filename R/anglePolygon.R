@@ -12,7 +12,7 @@
 #' This function is useful for detecting tps data files that contain errors (e.g. wrong sequence of digitizing landmarks, missing landmarks)
 #' so that corrective steps can be taken.
 #' @author Thian Liang Cheow \email{Tl2cheow@@yahoo.com}
-#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #' @examples
 #' #internal angles of a right-angled triangle in degrees
 #' anglePolygon(list(c(0,1),c(0,0),c(1,0)),degree=TRUE)

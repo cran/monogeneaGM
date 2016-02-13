@@ -46,6 +46,6 @@ polyVis(1, havelist=TRUE, listdata=ligophorus_tpsdata$bantingensis)
 Thian Liang Cheow \email{Tl2cheow@yahoo.com}
 }
 \references{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 }
 

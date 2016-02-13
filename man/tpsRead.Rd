@@ -29,7 +29,7 @@ using the TPSDIG2 software (Rohlf, 2013, 2015).
 Tsung Fei Khang \email{tfkhang@um.edu.my}
 }
 \references{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 
 Rohlf FJ. (2013). Morphometrics at SUNY Stony Brook. Available at http://life.bio.sunysb.edu/morph/soft-dataacq.html.
 

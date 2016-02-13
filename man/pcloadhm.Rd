@@ -67,7 +67,7 @@ colorBar(min=-1, max=1)
 Tsung Fei Khang \email{tfkhang@um.edu.my}
 }
 \references{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 }
 \seealso{
 \code{\link{plotCircular}}, \code{\link{pca2d}}, \code{\link{colorBar}}

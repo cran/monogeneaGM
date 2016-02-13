@@ -4,11 +4,11 @@
 \name{ligophorus_shape}
 \alias{ligophorus_shape}
 \title{Shape variable data for 13 \emph{Ligophorus} species}
-\format{A matrix containing 443 rows (samples) and 44 columns (shape variables).
+\format{A matrix containing 437 rows (samples) and 44 columns (shape variables).
 The shape variables are the GPA-coordinates of the 11 landmarks for both ventral and dorsal anchors.
-GPA was performed using the \code{geomorph} R package (Adams & Otarola-Castillo, 2013; Version 2.1.1 or higher).}
+GPA was performed using the \code{geomorph} R package (Adams & Otarola-Castillo, 2013; Version 3.0.0).}
 \source{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 }
 \usage{
 data(ligophorus_shape)

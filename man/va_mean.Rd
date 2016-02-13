@@ -8,7 +8,7 @@
 2 columns (xy-coordinates) representing GPA-coordinates averaged from samples belonging to
 the same species}
 \source{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 }
 \usage{
 data(va_mean)
@@ -19,7 +19,7 @@ A data set containing mean GPA coordinates for the ventral anchors of 13 \emph{L
 \details{
 For each specimen, GPA coordinates of all landmarks are averages of those from
 left and right anchors. Mean GPA coordinates of landmarks are required for shape evolution analysis as well as
-performing Adam's K test for presence of phylogenetic signal (Adams, 2014).
+performing Adam's Kmult test for presence of phylogenetic signal (Adams, 2014).
 }
 \author{
 Tsung Fei Khang \email{tfkhang@um.edu.my}

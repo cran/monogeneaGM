@@ -46,18 +46,20 @@ data(ligophorus_shape)
 data(ligotree)
 data(spcolmap)
 
-#Perform PCA of shape data for ventral anchors and make 2D plots
-pcashape <- pca2d(ligophorus_shape[,1:22],labcol=spcolmap$color,phylo=TRUE,phy=ligotree,genus="L. ")
+#Perform PCA of shape data for dorsal anchors and make 2D plots
+pcashape <- pca2d(ligophorus_shape[,23:44], labcol=spcolmap$color,
+phylo=TRUE, phy=ligotree, genus="L. ", bound.y=c(-0.08, 0.1),
+bound.x1=c(-0.2,0.2), bound.x2 = c(-0.2,0.2))
 
 #Check for proportion of variation explained by each PC
 summary(pcashape$pca)
 
 #A closer look with 3D plot
 tpColorPlot3d(pcashape$scores[,3:1], r=0.005, phylo=TRUE, phy=ligotree, labcol=spcolmap$color,
-xyzlabel=c("PC3 (11\%)","PC2 (19\%)","PC1 (55\%)"), mean.show=TRUE)
+xyzlabel=c("PC3 (8\%)","PC2 (10\%)","PC1 (61\%)"), mean.show=TRUE)
 }
 \references{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 
 Paradis E, Claude J & Strimmer K. (2004). APE: analyses of phylogenetics and evolution in R language. Bioinformatics 20: 289-290.
 

@@ -14,7 +14,7 @@
 #' @details The resulting scatter plot is an important graphical sanity check for potential problems after performing GPA.
 #' @seealso \code{\link{procrustesFit}}, \code{\link{stdLM}}
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
-#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #' @examples
 #' data(liewi_gpa)
 #'

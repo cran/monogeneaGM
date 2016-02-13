@@ -1,0 +1,23 @@
+monogeneaGM v1.1 (Release date: 2016-02-12)
+===========================================
+
+Changes:
+
+* The procrustesFit (and its dependencies) function has been fixed to prevent it from breaking as a result
+of calling the gpagen function in version 3.0.0 of geomorph (which has been updated and no longer supports 
+the arguments "pointscale" and "makePlot").
+
+* Added arguments dist.method and clust.method to the heatmapAnnot function. The default settings are
+dist.method = "manhattan" and clust.method = "ward.D". Users can now explore other combinations of 
+distance metric and clustering algorithm to obtain the most reasonable clustering outcome.
+
+* The data file "ligotree" has been updated. 
+Source: "ligophorus_MLtree.nwk" from http://datadryad.org/resource/doi:10.5061/dryad.50sg7.
+
+* The data file "ligophorus_tpsdata" has been updated. It now includes 530 instead of 537 specimens, 7 of which
+were found to be duplicated specimens or incorrectly identified specimens discovered during the review
+process of the manuscript. Subsequently, the data file "pwed_pd" has also been updated.
+Source: "monogeneaGM R script.zip" from http://datadryad.org/resource/doi:10.5061/dryad.50sg7.
+
+* As a result of updates to the gpagen function, the data files "ligophorus_shape", "ligophorus_tpsdata",
+"va_mean", "estimated_ancestral_va", "liewi_gpa" have also been updated.

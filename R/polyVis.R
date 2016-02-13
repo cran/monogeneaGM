@@ -9,7 +9,7 @@
 #' @details This plot is useful for detecting slides with inconsistencies in magnification.  
 #' It is also useful for detecting poor quality samples, as indicated by large shape variation between left and right forms. 
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
-#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #' @examples
 #' data(ligophorus_tpsdata)
 #' #Simultaneously visualise the first four specimen slides

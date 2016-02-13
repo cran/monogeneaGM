@@ -28,7 +28,7 @@
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
 #' @references Adams DC, Otarola-Castillo E. (2013). geomorph: an R package for the collection and analysis of geometric morphometric shape data. Methods in Ecology and Evolution 4:393-399.
 #'
-#' Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #'
 #' Revell LJ. (2012). phytools: An R package for phylogenetic comparative biology (and other things). Methods in Ecology and Evolution 3:217-223.
 #' @examples
@@ -40,7 +40,7 @@
 #'
 #' #PCA plot for the shape variables of the ventral anchors
 #' pca2d(ligophorus_shape[,1:22], labcol=spcolmap$color, phylo=TRUE,
-#' phy=ligotree, genus="L. ", bound.y=c(-0.08, 0.1), bound.x1=c(-0.2,0.2), 
+#' phy=ligotree, genus="L. ", bound.y=c(-0.1, 0.1), bound.x1=c(-0.2,0.2), 
 #' bound.x2 = c(-0.2,0.2))
 #'
 

@@ -10,7 +10,7 @@
 #' \code{phytools} package (Revell, 2012). Root ancestor mean GPA coordinates of anchor landmarks are required for 
 #' shape evolution analysis.
 #' @keywords datasets
-#' @source Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @source Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #' @seealso \code{\link{shapeEvo}}
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
 #' @references Revell LJ. (2012). phytools: An R package for phylogenetic comparative biology (and other things). 

@@ -1,6 +1,6 @@
 Package: monogeneaGM
-Version: 1.0
-Date: 2015-07-16
+Version: 1.1
+Date: 2016-02-12
 Title: Geometric Morphometric Analysis of Monogenean Anchors
 Author: Tsung Fei Khang
 Maintainer: Tsung Fei Khang <tfkhang@um.edu.my>
@@ -9,8 +9,8 @@ Imports: ape, cluster, circular, geomorph, gplots, phytools, rgl
 ZipData: no
 Description: Geometric morphometric and evolutionary biology analyses of anchor shape from four-anchored monogeneans. 
 License: GPL (>= 2)
-Packaged: 2015-07-16 03:47:00 UTC; TFKhang
+Packaged: 2016-02-12 16:00:00 UTC; TFKhang
 Repository: CRAN
-Date/Publication: 2015-07-16 17:29:06
+Date/Publication: 2016-02-13 00:50:28
 NeedsCompilation: no
 LazyData: true

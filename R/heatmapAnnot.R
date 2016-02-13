@@ -9,15 +9,13 @@
 #' @param genus single character abbreviation for genus
 #' @param rowlab if FALSE, suppresses row labels on the heat map
 #' @param pt if the rows have been ranked, two lines are drawn - one at the \code{pt}x100th percentile (bottom), 
-#' the other at the (1-\code{pt})x100th percentile (top); set to 0 to disable 
-#' @details This function customizes the \code{heatmap.2} function in the \code{gplots} package (Version 2.17.0). 
-#' Pairwise distances between samples are computed using unsquared Euclidean distance, therefore
-#' clustering is based on the generalized Ward criterion (Batagelj, 1988). Row standardization is switched on, 
-#' and a color legend for species is given in the left panel.  
+#' the other at the (1-\code{pt})x100th percentile (top); set to 0 to disable
+#' @param dist.method a distance metric implemented in the \code{dist} function; defaults to \code{manhattan}
+#' @param clust.method a clustering algorithm implemented in the \code{hclust} function; defaults to \code{ward.D}
+#' @details This function customizes the \code{heatmap.2} function in the \code{gplots} package (Version 2.17.0). Row standardization is switched on, and a color legend for species is given in the left panel.  
+#' @seealso \code{\link{dist}}, \code{\link{hclust}}
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
-#' @references Batagelj V. (1988). Generalized Ward and related clustering problems. In: Classification and Related Methods of Data Analysis. H.H.Bock (ed.). Amsterdam: North-Holland, pp. 67-74.
-#'
-#' Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #'
 #' Warnes GR, Bolker B, Bonebakker L, Gentleman R, Huber W, Liaw A, Lumley T,Maechler M, Magnusson M, Moeller S, 
 #' Schwartz M, Venables B. (2015). gplots:Various R programming tools for plotting data. R package version 2.17.0.
@@ -34,7 +32,7 @@
 #' #check dendrogram and note cut-off for the two main clades
 #' plot(dendrogram)
 #'
-#' clade_id <- cutree(dendrogram, h=0.55)
+#' clade_id <- cutree(dendrogram, h=0.5)
 #'
 #' f_s <- numeric(ncol(ligophorus_shape))
 #' 
@@ -51,7 +49,8 @@
 #' xlab="Specimens", genus="L. ")
 #'
 
-heatmapAnnot <- function (x, labcol, xlab = "", ylab = "", genus = "", rowlab=TRUE, pt = 0.25) {
+heatmapAnnot <- function (x, labcol, xlab = "", ylab = "", genus = "", rowlab=TRUE, pt = 0, dist.method="manhattan", clust.method="ward.D")
+{
 
     splabel <- as.character(levels(as.factor(rownames(x))))
     colorlabel <- unlist(mapply(function(k) rep(labcol[k], sum(rownames(x) == 
@@ -82,8 +81,8 @@ heatmapAnnot <- function (x, labcol, xlab = "", ylab = "", genus = "", rowlab=TR
 
     if(rowlab == FALSE){
     heatmap.2(t(x), col = rwbtones, scale = "row", Colv = TRUE, 
-        hclustfun = function(k) hclust(k, method = "ward.D"), dendrogram = "column", 
-        distfun = function(k) dist(k, method = "euclidean"), 
+        hclustfun = function(k) hclust(k, method = clust.method), dendrogram = "column", 
+        distfun = function(k) dist(k, method = dist.method), 
         symkey = FALSE, Rowv = FALSE, keysize = 0.25, ColSideColors = colorlabel, 
         margins = c(3, 3), density.info = "none", trace = "none", 
         labRow = FALSE, labCol = FALSE, xlab = xlab, ylab = ylab, 
@@ -95,8 +94,8 @@ heatmapAnnot <- function (x, labcol, xlab = "", ylab = "", genus = "", rowlab=TR
 
 	else{
     heatmap.2(t(x), col = rwbtones, scale = "row", Colv = TRUE, 
-        hclustfun = function(k) hclust(k, method = "ward.D"), dendrogram = "column", 
-        distfun = function(k) dist(k, method = "euclidean"), 
+        hclustfun = function(k) hclust(k, method = clust.method), dendrogram = "column", 
+        distfun = function(k) dist(k, method = dist.method), 
         symkey = FALSE, Rowv = FALSE, keysize = 0.25, ColSideColors = colorlabel, 
         margins = c(3, 3), density.info = "none", trace = "none", 
         labRow = colnames(x), labCol = FALSE, xlab = xlab, ylab = ylab, 
@@ -107,4 +106,5 @@ heatmapAnnot <- function (x, labcol, xlab = "", ylab = "", genus = "", rowlab=TR
 	}
 
 }
+
 

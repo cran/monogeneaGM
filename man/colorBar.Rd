@@ -51,7 +51,7 @@ Tsung Fei Khang \email{tfkhang@um.edu.my}
 \references{
 Colby J. (2011). Color bar legends for neuroimaging in R. Available at http://www.colbyimaging.com/wiki/statistics/color-bars.
 
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 }
 \seealso{
 \code{\link{pcloadhm}}, \code{\link{colorRampPalette}}

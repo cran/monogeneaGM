@@ -6,7 +6,7 @@
 #' @param x a vector of length 2 giving the xy-coordinates of the point defined by the user
 #' @param radians if FALSE, returns angle in degrees instead of radians
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
-#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' @references Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #' @examples
 #' anglecheck(c(0,1),radians=FALSE)
 #'

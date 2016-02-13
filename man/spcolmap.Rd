@@ -6,7 +6,7 @@
 \title{Species-color map}
 \format{a matrix - the first column gives the species names; the second their corresponding color code; the third their host species}
 \source{
-Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution.
+Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 }
 \usage{
 data(spcolmap)

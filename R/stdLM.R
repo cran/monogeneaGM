@@ -9,13 +9,13 @@
 #' @return an array of landmark coordinates
 #' @details The values in the \code{sgn} vector should be tuned to obtain the desired orientation of landmark configuration.
 #' This function processes the output from \code{procrustesFit}, which requires the \code{geomorph} package 
-#' (Adams & Otarola-Castillo, 2013). 
+#' (Version 3.0.0; Adams & Otarola-Castillo, 2013). 
 #' @seealso \code{\link{procrustesFit}}, \code{\link{plotLM}}
 #' @author Tsung Fei Khang \email{tfkhang@@um.edu.my}
 #' @references Adams DC, Otarola-Castillo E. (2013). geomorph: an R package for the collection and analysis of geometric morphometric shape data. 
 #' Methods in Ecology and Evolution 4:393-399.
 #'
-#' Khang TF, Soo OYM, Tan WB, Lim LHS. (2015). Monogenean anchor morphometry: systematic value, phylogenetic signal and evolution. 
+#' Khang TF, Soo OYM, Tan WB, Lim LHS. (2016). Monogenean anchor morphometry: systematic value, phylogenetic signal, and evolution. PeerJ 4:e1668.
 #' @examples
 #' library(geomorph)
 #'
